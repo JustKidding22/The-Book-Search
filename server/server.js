@@ -9,12 +9,7 @@ const cors = require("cors");
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-
-const MONGODB_URI = process.env.MONGODB_URI;
-mongoose.connect(MONGODB_URI, {
-  useNewUrlParser: true,
-  useFindAndModify: false,
-});
+console.log(process.env.MONGODB_URI);
 
 const corsOptions = {
   origin: "http://localhost:3000",
